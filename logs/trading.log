@@ -1,0 +1,71 @@
+2026-07-01 11:52:58,521 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2026-07-01 11:52:59,528 | INFO | Response : {}
+2026-07-01 11:54:07,324 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2026-07-01 11:54:08,375 | INFO | Response : {}
+2026-07-01 11:55:18,116 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2026-07-01 11:55:19,188 | INFO | Response : {}
+2026-07-01 11:59:54,582 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2026-07-01 11:59:55,484 | INFO | Response : {'orderId': 18172347283, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ52bebf171a61bd10abf6f0', 'price': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782887394981}
+2026-07-01 12:25:59,367 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2026-07-01 12:25:59,883 | INFO | Response : {'orderId': 18176841711, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ9a446131f33c23f3938fa', 'price': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782888959151}
+2026-07-01 12:31:33,526 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '120000', 'timeInForce': 'GTC'}
+2026-07-01 12:31:34,297 | INFO | Response : {'orderId': 18177784082, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJc06806bd63a6a34d449720', 'price': '120000.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782889293577}
+2026-07-01 12:34:19,944 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2026-07-01 12:34:20,615 | INFO | Response : {'orderId': 18178220851, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ5310c5f9fd03a5c7d912f3', 'price': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782889459886}
+2026-07-01 12:35:21,296 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': '0.001', 'price': '999999', 'timeInForce': 'GTC'}
+2026-07-01 12:35:21,919 | ERROR | APIError(code=-4002): Price greater than max price.
+Traceback (most recent call last):
+  File "C:\Development\trading_bot\bot\orders.py", line 21, in place_order
+    response = client.futures_create_order(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 7948, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-4002): Price greater than max price.
+2026-07-01 12:35:46,564 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '1000', 'timeInForce': 'GTC'}
+2026-07-01 12:35:47,319 | ERROR | APIError(code=-4024): Limit price can't be lower than 55720.55.
+Traceback (most recent call last):
+  File "C:\Development\trading_bot\bot\orders.py", line 21, in place_order
+    response = client.futures_create_order(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 7948, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-4024): Limit price can't be lower than 55720.55.
+2026-07-01 12:36:10,125 | INFO | Request : {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '55720.55', 'timeInForce': 'GTC'}
+2026-07-01 12:36:10,759 | ERROR | APIError(code=-4014): Price not increased by tick size.
+Traceback (most recent call last):
+  File "C:\Development\trading_bot\bot\orders.py", line 21, in place_order
+    response = client.futures_create_order(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 7948, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shada\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-4014): Price not increased by tick size.
+2026-07-01 18:23:53,133 | INFO | Request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001'}
+2026-07-01 18:23:54,247 | INFO | Initial Response: {'orderId': 18239658194, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJfaf5a2288c0942214e235e', 'price': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782910433190}
+2026-07-01 18:23:55,445 | INFO | Latest Response: {'orderId': 18239658194, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-Cb7ytekJfaf5a2288c0942214e235e', 'price': '0.00', 'avgPrice': '58374.500000', 'origQty': '0.0010', 'executedQty': '0.0010', 'cumQuote': '58.374500', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1782910433190, 'updateTime': 1782910433190}
